@@ -1,0 +1,26 @@
+Informationen im req (Request)-Objekt
+    req.method: Die HTTP-Methode der Anfrage (z.B. GET, POST, PUT, DELETE).
+    req.url: Die URL der Anfrage.
+    req.path: Der Pfad der Anfrage.
+    req.headers: Ein Objekt, das die Header der Anfrage enthält.
+    req.params: Ein Objekt, das die Route-Parameter enthält.
+    req.query: Ein Objekt, das die URL-Query-Parameter enthält.
+    req.body: Der Body der Anfrage, verfügbar, wenn Middleware wie express.json() verwendet wird.
+    req.ip: Die IP-Adresse des Clients.
+    req.cookies: Die Cookies, falls die Middleware cookie-parser verwendet wird.
+    req.get(headerName): Gibt den Wert eines bestimmten Headers zurück.
+
+Informationen im res (Response)-Objekt
+    res.statusCode: Der HTTP-Statuscode der Antwort.
+    res.status(statusCode): Setzt den HTTP-Statuscode der Antwort.
+    res.set(headerName, value): Setzt einen Header in der Antwort.
+    res.send(body): Sendet eine Antwort an den Client.
+    res.json(json): Sendet eine JSON-Antwort.
+    res.redirect(url): Leitet die Anfrage an eine andere URL weiter.
+    res.render(view, locals): Rendert eine View-Vorlage (z.B. bei Verwendung von Template-Engines wie Pug).
+    
+Informationen im err (Error)-Objekt
+Wenn ein Fehler auftritt und an next(err) übergeben wird, enthält das err-Objekt in der Regel:
+
+err.message: Die Fehlermeldung.
+err.stack: Der Stack-Trace des Fehlers, hilfreich für Debugging.
